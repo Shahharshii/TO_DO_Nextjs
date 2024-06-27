@@ -16,7 +16,7 @@ export default function DeleteBtn({ id }) {
     }
     return (
         <button onClick={handleDeleteTask}>
-            <MdOutlineDelete size={32} />
+            <MdOutlineDelete size={32} className="text-red-700" />
         </button>
     );
 }

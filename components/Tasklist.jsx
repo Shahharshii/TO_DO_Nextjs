@@ -15,18 +15,18 @@ export default async function Tasklist() {
                 task?.map((task) => {
                     return (
 
-                        <div className="task" key={task.id}>
-                            <div className="task-details">
-                                <h2 className="task-title"> {task.title}</h2>
+                        <div className="flex mb-2 gap-2 border border-cyan-900 p-5  bg-amber-50" key={task.id}>
+                            <div className="">
+                                <h2 className='font-bold'> {task.title}</h2>
                                 <p className="description"> {task.description} </p>
 
                             </div>
-                            <div className="task-actions">
-                                <DeleteBtn id={task._id} />
-                                <Link className="edit" href={`/edit-task/${task._id}`} title="edit">
+                            <div className="flex ml-auto justify-end gap-2">
+                                <DeleteBtn id={task._id} className='my-auto' />
+                                <Link className="text-green-800 my-auto" href={`/edit-task/${task._id}`} title="edit">
                                     <HiPencilAlt size={32} />
                                 </Link>
-                                <Link href={`/task/${task._id}`} title="view">
+                                <Link className="text-blue-600 my-auto" href={`/courses/${task._id}`} title="view">
                                     <AiOutlineEye size={32} />
                                 </Link>
 

@@ -29,20 +29,24 @@ export default function Editform({ task }) {
         console.log(newTask);
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="rounded-xl bg-amber-100 p-3 flex flex-col gap-4 items-center shadow">
+
             <input
                 type="text"
                 placeholder="Enter task title"
                 onChange={(e) => setNewTitle(e.target.value)}
                 value={newTitle}
+                className="w-full h-[40px] rounded-xl p-2"
             />
             <input
                 type="text"
                 placeholder="Enter task description"
                 onChange={(e) => setNewDescription(e.target.value)}
                 value={newDescription}
+                className="w-full h-[100px] rounded-xl p-2"
             />
-            <button type="submit">Update Task</button>
+            <button type="submit" className="bg-cyan-900 p-4 rounded-xl text-white hover:text-black hover:bg-blue-300 duration-500 font-semibold">Update Task</button>
+
         </form>
     );
 }
