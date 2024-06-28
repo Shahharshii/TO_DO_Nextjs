@@ -10,7 +10,7 @@ export default async function viewtask({ params: { id } }) {
             <hr />
             <div >
                 <h2>{task.title}</h2>
-                <h2>{task.description}</h2>
+                <p>{task.description}</p>
             </div>
         </div>
     );

@@ -5,9 +5,9 @@ export default async function gettasks() {
             //it will fetch  from the database
             cache: "no-store"
         });
-        const task = await response.json();
-        return task.data;
+        const tasks = await response.json();
+        return tasks.data;
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }
